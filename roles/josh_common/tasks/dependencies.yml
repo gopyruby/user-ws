@@ -1,0 +1,12 @@
+---
+  #{% from jinja2.nodes import List %}
+  #{% set packages = List("yadm", "git") %}
+  #{% for package in packages %}
+- name: Install {{ package }}
+  dnf:
+    #{% if %}
+    enablerepo: thelocehiliosan/yadm
+    #{% endif %}
+    name: yadm
+    state: latest
+  #{% endfor %}
