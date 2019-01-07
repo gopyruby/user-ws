@@ -1,9 +1,0 @@
----
-# tasks file for josh_workstation_setup
-- easy_install:
-    name: pip
-    state: latest
-
-# TODO: Extract to vars
-- pip:
-    name: pygame==1.9.4

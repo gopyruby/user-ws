@@ -1,0 +1,27 @@
+---
+packages:
+  - git
+  - vim
+  - "@xfce-desktop-environment"
+  - python3-devel
+  - python2-devel
+  - redhat-rpm-config
+  - python-setuptools
+  - libselinux-python
+nerdfonts_base: "https://github.com/ryanoasis/nerd-fonts"
+nerdfonts:
+  - "DejaVuSansMono"
+git_repos:
+  - https://github.com/python/peps.git
+go_version: 1.11.4
+go_url: https://dl.google.com/go/go{{go_version}}.linux-amd64.tar.gz
+primary_user: jsantos
+users:
+  - name: jsantos
+directories:
+  - ~/.local/share/fonts/
+  - ~/build
+pip_packages:
+  pygame:
+    version: 1.9.4
+    cmp: 'eq'

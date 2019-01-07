@@ -1,0 +1,29 @@
+# - name: Install pip packages 
+#   pip:
+#     name: {{item.name}} {{item.version}}
+#     with_items: "{{pip_packages}}"
+
+Install dependencies:
+  - git
+  - vim
+  - golang
+    - 1.11.1
+    - Packages:
+      - mvdan.cc/sh/shfmt
+  - nvm
+    - 0.33.11
+    - latest stable
+    - Packages:
+      - serverless
+  - docker-ce
+  - pyenv
+    - python 3.7
+      - Packages:
+        - ansible 2.7.5
+        - molecule 2.19.0
+        - docker 3.6.0
+        - virtualenv
+  - vim-plug
+
+TODO Setup KickStart
+

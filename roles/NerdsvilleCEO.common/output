@@ -1,0 +1,144 @@
+--> Validating schema /home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default/molecule.yml.
+Validation completed successfully.
+--> Test matrix
+    
+└── default
+    ├── dependency
+    ├── create
+    ├── prepare
+    └── converge
+    
+--> Scenario: 'default'
+--> Action: 'dependency'
+Skipping, missing the requirements file.
+--> Scenario: 'default'
+--> Action: 'create'
+DEBUG: ANSIBLE ENVIRONMENT
+---
+ANSIBLE_CONFIG: /tmp/molecule/NerdsvilleCEO.common/default/ansible.cfg
+ANSIBLE_FILTER_PLUGINS: /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/plugins/filters:/tmp/molecule/NerdsvilleCEO.common/default/plugins/filters:/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/plugins/filters
+ANSIBLE_LIBRARY: /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/plugins/libraries:/tmp/molecule/NerdsvilleCEO.common/default/library:/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/library
+ANSIBLE_ROLES_PATH: /tmp/molecule/NerdsvilleCEO.common/default/roles:/home/jsantos/development/user-workstation/roles
+
+DEBUG: MOLECULE ENVIRONMENT
+---
+MOLECULE_DEBUG: 'True'
+MOLECULE_DEPENDENCY_NAME: galaxy
+MOLECULE_DRIVER_NAME: docker
+MOLECULE_ENV_FILE: /home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/.env.yml
+MOLECULE_EPHEMERAL_DIRECTORY: /tmp/molecule/NerdsvilleCEO.common/default
+MOLECULE_FILE: /home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default/molecule.yml
+MOLECULE_INSTANCE_CONFIG: /tmp/molecule/NerdsvilleCEO.common/default/instance_config.yml
+MOLECULE_INVENTORY_FILE: /tmp/molecule/NerdsvilleCEO.common/default/ansible_inventory.yml
+MOLECULE_LINT_NAME: yamllint
+MOLECULE_PROJECT_DIRECTORY: /home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common
+MOLECULE_PROVISIONER_LINT_NAME: ansible-lint
+MOLECULE_PROVISIONER_NAME: ansible
+MOLECULE_SCENARIO_DIRECTORY: /home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default
+MOLECULE_SCENARIO_NAME: default
+MOLECULE_VERIFIER_LINT_NAME: flake8
+MOLECULE_VERIFIER_NAME: testinfra
+MOLECULE_VERIFIER_TEST_DIRECTORY: /home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default/tests
+
+DEBUG: SHELL REPLAY
+ANSIBLE_CONFIG=/tmp/molecule/NerdsvilleCEO.common/default/ansible.cfg ANSIBLE_FILTER_PLUGINS=/home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/plugins/filters:/tmp/molecule/NerdsvilleCEO.common/default/plugins/filters:/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/plugins/filters ANSIBLE_LIBRARY=/home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/plugins/libraries:/tmp/molecule/NerdsvilleCEO.common/default/library:/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/library ANSIBLE_ROLES_PATH=/tmp/molecule/NerdsvilleCEO.common/default/roles:/home/jsantos/development/user-workstation/roles MOLECULE_DEBUG=True MOLECULE_DEPENDENCY_NAME=galaxy MOLECULE_DRIVER_NAME=docker MOLECULE_ENV_FILE=/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/.env.yml MOLECULE_EPHEMERAL_DIRECTORY=/tmp/molecule/NerdsvilleCEO.common/default MOLECULE_FILE=/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default/molecule.yml MOLECULE_INSTANCE_CONFIG=/tmp/molecule/NerdsvilleCEO.common/default/instance_config.yml MOLECULE_INVENTORY_FILE=/tmp/molecule/NerdsvilleCEO.common/default/ansible_inventory.yml MOLECULE_LINT_NAME=yamllint MOLECULE_PROJECT_DIRECTORY=/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common MOLECULE_PROVISIONER_LINT_NAME=ansible-lint MOLECULE_PROVISIONER_NAME=ansible MOLECULE_SCENARIO_DIRECTORY=/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default MOLECULE_SCENARIO_NAME=default MOLECULE_VERIFIER_LINT_NAME=flake8 MOLECULE_VERIFIER_NAME=testinfra MOLECULE_VERIFIER_TEST_DIRECTORY=/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/molecule/default/tests
+
+DEBUG: COMMAND
+/home/jsantos/.venvs/ansible/bin/ansible-playbook --skip-tags=molecule-notest,notest --diff --inventory=/tmp/molecule/NerdsvilleCEO.common/default/ansible_inventory.yml /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/playbooks/docker/create.yml -vvv
+
+    ansible-playbook 2.7.5
+      config file = /tmp/molecule/NerdsvilleCEO.common/default/ansible.cfg
+      configured module search path = ['/home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/plugins/libraries', '/tmp/molecule/NerdsvilleCEO.common/default/library', '/home/jsantos/development/user-workstation/roles/NerdsvilleCEO.common/library']
+      ansible python module location = /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/ansible
+      executable location = /home/jsantos/.venvs/ansible/bin/ansible-playbook
+      python version = 3.7.1 (default, Nov 23 2018, 10:01:49) [GCC 8.2.1 20181105 (Red Hat 8.2.1-5)]
+    Using /tmp/molecule/NerdsvilleCEO.common/default/ansible.cfg as config file
+    /tmp/molecule/NerdsvilleCEO.common/default/ansible_inventory.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+    /tmp/molecule/NerdsvilleCEO.common/default/ansible_inventory.yml did not meet script requirements, check plugin documentation if this is unexpected
+    Parsed /tmp/molecule/NerdsvilleCEO.common/default/ansible_inventory.yml inventory source with yaml plugin
+    
+    PLAYBOOK: create.yml ***********************************************************
+    1 plays in /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/playbooks/docker/create.yml
+    
+    PLAY [Create] ******************************************************************
+    META: ran handlers
+    
+    TASK [Log into a Docker registry] **********************************************
+    task path: /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/playbooks/docker/create.yml:8
+    skipping: [localhost] => (item={'name': 'instance', 'image': 'fedora:29'})  => {
+        "changed": false,
+        "item": {
+            "image": "fedora:29",
+            "name": "instance"
+        },
+        "skip_reason": "Conditional result was False"
+    }
+    
+    TASK [Create Dockerfiles from image names] *************************************
+    task path: /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/molecule/provisioner/ansible/playbooks/docker/create.yml:21
+    <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jsantos
+    <127.0.0.1> EXEC /bin/sh -c 'echo ~jsantos && sleep 0'
+    <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131 `" && echo ansible-tmp-1546872782.419798-69134964646131="` echo /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131 `" ) && sleep 0'
+    Using module file /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/ansible/modules/files/stat.py
+    <127.0.0.1> PUT /home/jsantos/.ansible/tmp/ansible-local-153916g794pni/tmp4v8yzelu TO /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_stat.py
+    <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/ /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_stat.py && sleep 0'
+    <127.0.0.1> EXEC /bin/sh -c '/home/jsantos/.venvs/ansible/bin/python3 /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_stat.py && sleep 0'
+    Using module file /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/ansible/modules/files/file.py
+    <127.0.0.1> PUT /home/jsantos/.ansible/tmp/ansible-local-153916g794pni/tmpgx_9srcf TO /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_file.py
+    <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/ /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_file.py && sleep 0'
+    <127.0.0.1> EXEC /bin/sh -c '/home/jsantos/.venvs/ansible/bin/python3 /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_file.py && sleep 0'
+    <127.0.0.1> PUT /home/jsantos/.ansible/tmp/ansible-local-153916g794pni/tmphey5e63d/Dockerfile.j2 TO /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/source
+    <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/ /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/source && sleep 0'
+    Using module file /home/jsantos/.venvs/ansible/lib/python3.7/site-packages/ansible/modules/files/copy.py
+    <127.0.0.1> PUT /home/jsantos/.ansible/tmp/ansible-local-153916g794pni/tmptpabih7j TO /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_copy.py
+    <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/ /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_copy.py && sleep 0'
+    <127.0.0.1> EXEC /bin/sh -c '/home/jsantos/.venvs/ansible/bin/python3 /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/AnsiballZ_copy.py && sleep 0'
+    <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/ > /dev/null 2>&1 && sleep 0'
+    failed: [localhost] (item={'name': 'instance', 'image': 'fedora:29'}) => {
+        "changed": false,
+        "checksum": "0ad371ec057b899e7735cb9f2052c7b6b38a302d",
+        "diff": [
+            {
+                "after": "# Molecule managed\n\nFROM fedora:29\n\nRUN if [ $(command -v apt-get) ]; then apt-get update && apt-get install -y python sudo bash ca-certificates && apt-get clean; \\\n    elif [ $(command -v dnf) ]; then dnf makecache && dnf --assumeyes install python sudo python-devel python2-dnf bash && dnf clean all; \\\n    elif [ $(command -v yum) ]; then yum makecache fast && yum install -y python sudo yum-plugin-ovl bash && sed -i 's/plugins=0/plugins=1/g' /etc/yum.conf && yum clean all; \\\n    elif [ $(command -v zypper) ]; then zypper refresh && zypper install -y python sudo bash python-xml && zypper clean -a; \\\n    elif [ $(command -v apk) ]; then apk update && apk add --no-cache python sudo bash ca-certificates; \\\n    elif [ $(command -v xbps-install) ]; then xbps-install -Syu && xbps-install -y python sudo bash ca-certificates && xbps-remove -O; fi\n",
+                "after_header": "/home/jsantos/.ansible/tmp/ansible-local-153916g794pni/tmphey5e63d/Dockerfile.j2",
+                "before": ""
+            }
+        ],
+        "invocation": {
+            "module_args": {
+                "_original_basename": "Dockerfile.j2",
+                "attributes": null,
+                "backup": false,
+                "checksum": "0ad371ec057b899e7735cb9f2052c7b6b38a302d",
+                "content": null,
+                "delimiter": null,
+                "dest": "/tmp/molecule/NerdsvilleCEO.common/default/Dockerfile_fedora_29",
+                "directory_mode": null,
+                "follow": false,
+                "force": true,
+                "group": null,
+                "local_follow": null,
+                "mode": null,
+                "owner": null,
+                "regexp": null,
+                "remote_src": null,
+                "selevel": null,
+                "serole": null,
+                "setype": null,
+                "seuser": null,
+                "src": "/home/jsantos/.ansible/tmp/ansible-tmp-1546872782.419798-69134964646131/source",
+                "unsafe_writes": null,
+                "validate": null
+            }
+        },
+        "item": {
+            "image": "fedora:29",
+            "name": "instance"
+        },
+        "msg": "Aborting, target uses selinux but python bindings (libselinux-python) aren't installed!"
+    }
+    
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=0    changed=0    unreachable=0    failed=1   
+    
+    

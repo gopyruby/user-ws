@@ -1,6 +1,4 @@
 ---
 - hosts: workstations
   roles:
-    - roles: josh_workstation_setup
-      #vars:
-        # Looks like a dictionary, not list
+    - roles: NerdsvilleCEO.common

@@ -1,0 +1,56 @@
+---
+- name: Update package cache
+  dnf: update_cache=yes
+
+- name: Install packages
+  dnf:
+    name: "{{packages}}"
+    state: latest
+
+- name: Install pip
+  command:
+    easy_install pip
+
+# TODO: Replace above block with below code once
+# https://github.com/ansible/ansible/pull/39073 merged
+# easy_install:
+#   name: pip
+#   state: latest
+
+- name: Make necessary directories
+  file:
+    path: "{{item}}" 
+    state: directory
+  become_user: "{{primary_user}}"
+  with_items: "{{directories}}"
+
+- name: Install patched fonts
+  get_url:
+    url: "{{nerdfonts_base}}/tree/master/patched-fonts/{{item}}"
+    dest: "~/.local/share/fonts/{{item}}.otf"
+  with_items: "{{nerdfonts}}"
+  become_user: "{{primary_user}}"
+
+- name: Pull down git repositories
+  git:
+    repo: "{{item}}"
+    dest: "~/development/{{item}}"
+  with_items: "{{git_repos}}"
+  become_user: "{{primary_user}}"
+
+- name: Install golang
+  get_url: 
+    url: "{{go_url}}"
+    dest: "~/build/go-{{go_version}}.tar.gz"
+
+- name: Unarchive go
+  unarchive:
+    src: "~/build/go-{{go_version}}.tar.gz"
+    dest: /usr/local
+    remote_src: yes
+  become: yes
+
+- name: Cleanup
+  file:
+    path: ~/build
+    state: absent

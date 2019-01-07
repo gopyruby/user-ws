@@ -1,0 +1,5 @@
+---
+- name: Add users
+  user:
+    name: "{{item.name}}"
+  with_items: "{{users}}"
